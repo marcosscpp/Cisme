@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+
+  @include respond-to("xxl") {
+    font-size: 16px;
+  }
+
+  @include respond-to("md") {
+    font-size: 14px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+strong {
+  display: inline-block;
+}

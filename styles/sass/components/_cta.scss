@@ -1,0 +1,30 @@
+.cta {
+  align-items: center;
+  background: $tan-200;
+  border: $green-400 1px solid;
+  border-radius: 30px;
+  color: $green-400;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 800;
+  gap: 0.625rem;
+  margin: 1.875rem auto 0 auto;
+  padding: 0.75rem 1.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+  width: fit-content;
+
+  @include respond-to("md") {
+    font-size: 14px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &:hover {
+    background: darken($tan-200, 30%);
+    color: lighten(desaturate($green-400, 100%), 100%);
+  }
+}

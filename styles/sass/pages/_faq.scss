@@ -1,0 +1,131 @@
+.faq {
+  background-color: $beige-100;
+  padding: 3.75rem 1.25rem;
+
+  @include respond-to("md") {
+    padding-bottom: 5rem;
+  }
+
+  &__title {
+    color: $green-400;
+    font: {
+      size: 1.125rem;
+      weight: 900;
+    }
+    margin: {
+      bottom: 0.625rem;
+      left: 1.875rem;
+    }
+    text-transform: uppercase;
+
+    @include respond-to("lg") {
+      margin-left: 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 70%;
+
+    @include respond-to("lg") {
+      width: 100%;
+    }
+
+    dt {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      user-select: none;
+      padding: 0.875rem 1.875rem;
+
+      &.active {
+        margin-bottom: 0;
+        &::after {
+          background: url("#{$icons-path}/minus.svg") no-repeat center / 1.25rem;
+          background-color: $gray-200;
+          transform: rotate(180deg);
+        }
+      }
+
+      &::after {
+        align-items: center;
+        justify-content: center;
+        background: url("#{$icons-path}/plus.svg") no-repeat center / 1.25rem;
+        background-color: $gray-200;
+        border-radius: 50px;
+        content: "";
+        display: flex;
+        height: 1.875rem;
+        flex-shrink: 0;
+        transition:
+          transform 0.4s ease-out,
+          background 0.2s ease-out;
+        width: 1.875rem;
+      }
+
+      &:nth-of-type(even) {
+        color: $green-400;
+        background-color: $white;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $green-400;
+        color: $white;
+      }
+    }
+
+    dd {
+      color: var(--g01);
+      display: none;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      padding: 1.25rem 0 1.25rem 1.25rem;
+
+      &.active {
+        animation: slideDown 0.5s ease-out;
+        will-change: max-height;
+        display: block;
+      }
+
+      &:nth-of-type(even) {
+        color: $green-400;
+        background-color: $white;
+        border-top: $green-400 solid 0.125rem;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $green-400;
+        color: $white;
+        border-top: $white solid 0.125rem;
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 18.75rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .faq__list dt {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .faq__list dt {
+    gap: 0.625rem;
+  }
+}

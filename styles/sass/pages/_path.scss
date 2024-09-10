@@ -1,0 +1,139 @@
+$left-offset: -40px;
+$translate-offset: calc(-100% - 11px);
+
+.path {
+  background: $green-400;
+  color: $white;
+  text-transform: uppercase;
+  padding: 4.125rem 0;
+
+  @include respond-to("md") {
+    padding: 4.125rem 1.25rem;
+  }
+
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__steps {
+    font-size: clamp(0.75rem, 3vw, 1rem);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 60%;
+
+    @include respond-to("md") {
+      width: 75%;
+    }
+
+    * {
+      margin: 1.625rem 0;
+    }
+
+    .step {
+      position: relative;
+
+      &__title {
+        background: $green-700;
+        border-radius: 40px;
+        font-size: inherit;
+        margin-top: 3.25rem;
+        padding: 0.375rem 1.125rem;
+        position: relative;
+        width: fit-content;
+
+        &::before {
+          background: $green-400;
+          content: "";
+          display: inline-block;
+          height: 0.625rem;
+          left: $left-offset;
+          position: absolute;
+          top: 52%;
+          transform: translate($translate-offset, -50%);
+          width: 0.5rem;
+        }
+
+        @include respond-to("md") {
+          margin: 0 auto;
+          text-align: center;
+          text-wrap: balance;
+          width: 90%;
+        }
+      }
+
+      &:nth-child(1) .step__title {
+        &::before {
+          display: none;
+        }
+        margin-top: 0;
+      }
+
+      &:nth-child(even)::before {
+        background: $white;
+      }
+
+      &:nth-child(odd)::before {
+        background: $tan-200;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 150%;
+        left: $left-offset;
+        position: absolute;
+        top: 10%;
+        transform: translateX($translate-offset);
+        width: 0.375rem;
+      }
+
+      &:last-child::before {
+        height: 118%;
+
+        @include respond-to("md") {
+        height: 100%;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        background: $green-700;
+        border: 0.25rem solid $white;
+        content: "";
+        border-radius: 50%;
+        display: inline-block;
+        height: 1.75rem;
+        left: $left-offset;
+        width: 1.75rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-100%, -50%);
+      }
+    }
+  }
+
+  @include respond-to("md") {
+    $left-offset: -20px;
+    $translate-offset: calc(-100% - 6px);
+
+    .step {
+      &::before {
+        left: $left-offset;
+        transform: translateX($translate-offset);
+      }
+
+      li::before {
+        left: $left-offset - $left-offset * 0.2;
+      }
+
+      &__title::before {
+        width: 2rem;
+        left: $left-offset;
+      }
+    }
+  }
+}

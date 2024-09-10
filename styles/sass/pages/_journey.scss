@@ -1,0 +1,55 @@
+.journey {
+  align-items: flex-end;
+  background: #71abdc url("#{$image-path}/journey.webp") no-repeat top / cover;
+  color: $gray-700;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 1.4;
+  padding: 8rem 1.25rem 4rem 1.25rem;
+  text-wrap: balance;
+
+  @include respond-to("xl") {
+    background: #71abdc;
+    justify-content: center;
+    padding: 3rem 1.25rem;
+  }
+
+  &__container {
+    width: 58%;
+    margin-right: 6rem;
+
+    @include respond-to("xl") {
+      margin: 0;
+      width: 90%;
+    }
+  }
+
+  &__texts {
+    align-items: flex-start;
+    display: flex;
+    @include respond-to("xl") {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    gap: 2rem 3.75rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  strong {
+    display: block;
+    font-size: clamp(1.375rem, 2vw, 26px);
+    font-weight: 900;
+    margin: 1.625rem auto 0 auto;
+    text-align: center;
+    width: 80%;
+
+    @include respond-to("xl") {
+      width: 100%;
+    }
+  }
+}

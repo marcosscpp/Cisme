@@ -1,0 +1,14 @@
+$font-name: "Avenir";
+
+@include font-face($font-name, "AvenirLTStd-Black", 900);
+@include font-face($font-name, "AvenirLTStd-BlackOblique", 900, italic);
+@include font-face($font-name, "AvenirLTStd-Book", 400);
+@include font-face($font-name, "AvenirLTStd-BookOblique", 400, italic);
+@include font-face($font-name, "AvenirLTStd-Heavy", 800);
+@include font-face($font-name, "AvenirLTStd-HeavyOblique", 800, italic);
+@include font-face($font-name, "AvenirLTStd-Light", 300);
+@include font-face($font-name, "AvenirLTStd-LightOblique", 300, italic);
+@include font-face($font-name, "AvenirLTStd-Medium", 500);
+@include font-face($font-name, "AvenirLTStd-MediumOblique", 500, italic);
+@include font-face($font-name, "AvenirLTStd-Oblique", normal, italic);
+@include font-face($font-name, "AvenirLTStd-Roman", normal);
