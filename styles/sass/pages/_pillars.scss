@@ -1,0 +1,66 @@
+.pillars {
+  background-color: $beige-100;
+  font-size: 1.125rem;
+  padding: 3.75rem 1.25rem;
+
+  p + p {
+    margin-top: 1.5rem;
+  }
+
+  header {
+    align-items: center;
+    border: 1px solid $gray-800;
+    border-radius: 40px;
+    color: $gray-800;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    width: 66%;
+    max-width: 62.5rem;
+    padding: 1.25rem 2rem;
+
+    @include respond-to("lg") {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+
+    @include respond-to("sm") {
+      img {
+        height: auto;
+        width: 10rem;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.375rem;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90%;
+
+    @include respond-to("md") {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    background: $white;
+    border: 2px solid $green-700;
+    border-radius: 40px;
+    color: $green-700;
+    flex: 1;
+    flex-basis: calc(33% - 1.375rem);
+    text-align: center;
+    min-width: 320px;
+    padding: 3.5rem 1.75rem;
+
+    strong {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
