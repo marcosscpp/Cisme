@@ -1,0 +1,44 @@
+.hero {
+  align-items: center;
+  background: url("#{$image-path}/hero-bg.webp") no-repeat center / cover;
+  color: $white;
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+
+  @include respond-to("lg") {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("#{$image-path}/hero-bg.webp") no-repeat center / cover;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    @include respond-to("lg") {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  header {
+    width: 50%;
+    @include respond-to("lg") {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__video {
+    .video {
+      width: 500px;
+      height: 300px;
+      border-radius: 40px;
+      background: rgb(165, 165, 165);
+    }
+  }
+}

@@ -12,18 +12,18 @@
   <!-- Google Fonts Import -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <!-- End Google Fonts Import -->
-
-  <!-- Custom CSS + JS -->
-  <link rel="stylesheet" href="./styles/style.css">
-  <script defer type="module" src="./scripts/script.js"></script>
-  <!-- End Custom CSS + JS -->
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- End Swiper -->
+
+  <!-- Custom CSS + JS -->
+  <link rel="preload" href="./styles/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script defer type="module" src="./scripts/script.js"></script>
+  <!-- End Custom CSS + JS -->
 
   <!-- Favicons -->
 
@@ -32,8 +32,56 @@
 
 <body>
   <main>
-    <section class="hero" id="hero"></section>
-    <section class="about"></section>
+    <section class="hero" id="hero">
+      <div class="hero__container">
+        <header>
+          <a href="htpps://cismesaude.com.br"><img src="./assets/images/logo-cisme.png" alt="CISME Centro Integrado de Saúde Mental" width="232" height="99"></a>
+          <h1>Recupere sua saúde mental, emocional e viva com <strong>equilíbrio absoluto</strong> todos os dias</h1>
+          <p>Veja na prática como o <strong>Método S.M.I (Saúde Mental Integral)</strong>, uma nova abordagem que integra psiquiatria, psicologia e neuropsicologia para tratar a raiz do seu problema</p>
+          <a href="" class="cta"><img src="./assets/images/whatsapp.png" alt="Ícone do WhatsApp" loading="lazy">Toque aqui para falar com nossa equipe no WhatsApp</a>
+        </header>
+        <div class="hero__video">
+          <div class="video"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__content">
+        <h2>Conheça a Cisme</h2>
+        <p>Na CISME, acreditamos que o caminho para uma vida equilibrada e plena começa com uma abordagem integrada e multidisciplinar.</p>
+
+        <p>Combinando o melhor da:
+          <strong>Psiquiatria - Psicologia - Neuropsicologia</strong>
+          Ajudamos você a enfrentar e superar desafios emocionais de forma eficaz e duradoura.
+        </p>
+
+        <p>Nossa missão é transformar vidas, uma pessoa de cada vez, oferecendo um tratamento que vai além dos sintomas e realmente trata a causa raiz dos problemas.</p>
+      </div>
+      <img class="about__image" src="./assets/images/mulher-sorridente-atendendo-cliente.webp" alt="Mulher sorridente interagindo com um cliente, oferecendo um ambiente amigável e acolhedor" title="Atendimento Acolhedor - CISME" loading="lazy" width="680" height="517">
+
+    </section>
+    <section class="method">
+      <div class="method__content">
+        <h2 class="method__title"><img src="./assets/icons/brain.svg" alt="">Na Cisme, você é o centro do tratamento!</h2>
+        <div class="method__text">
+          <p>
+            Imagine finalmente sentir a tranquilidade e o equilíbrio que você sempre buscou, sabendo que está no comando do seu bem-estar.
+          </p>
+          <p>
+            Você não apenas participa ativamente do seu processo de cura, mas também retoma o controle sobre sua vida emocional.
+          </p>
+          <p>
+            Nossa abordagem é personalizada e garante que suas necessidades sejam priorizadas em cada etapa.
+          </p>
+          <p>
+            E isso tudo é possível através da Metodologia da Cisme: <strong>Método S.M.I!</strong>
+          </p>
+        </div>
+      </div>
+      <img class="method__image" src="assets/images/mulher-sentindo-liberdade-ao-sol.webp" alt="Mulher de olhos fechados, sentindo o sol no rosto, em uma pose relaxada" title="Sentindo Liberdade e Paz Interior - CISME" loading="lazy" width="469" height="601">
+
+    </section>
     <section class="pillars">
       <header>
         <img src="./assets/icons/icone-saude-mental.png" alt="Ícone representando a saúde mental com símbolos de cérebro, coração, engrenagem e mais ao redor" title="Saúde Mental Integrada - CISME" loading="lazy" width="199" height="191">

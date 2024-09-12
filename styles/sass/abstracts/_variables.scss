@@ -1,9 +1,9 @@
 // Colors
 $green-400: #768774;
-$green-700: #383E31;
+$green-700: #383e31;
 
-$beige-100: #F3E7DA;
-$tan-200: #E4C9AC; 
+$beige-100: #f3e7da;
+$tan-200: #e4c9ac;
 
 $white: #fff;
 $gray-200: #d9d9d9;
@@ -12,7 +12,7 @@ $gray-800: #272525;
 $black: #000;
 
 // Fonts
-$primary-font: "Avenir", sans-serif;
+$primary-font: "Avenir", "Inter", sans-serif;
 $secondary-font: "Inter", sans-serif;
 
 // Folders Path
@@ -20,5 +20,4 @@ $base-path: "../assets";
 
 $image-path: "#{$base-path}/images";
 $icons-path: "#{$base-path}/icons";
-$bg-path: "#{$base-path}/backgrounds";
 $font-path: "#{$base-path}/fonts";

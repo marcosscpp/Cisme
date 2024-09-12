@@ -1,0 +1,60 @@
+.about {
+  justify-content: flex-end;
+  background-color: $green-400;
+  display: flex;
+  padding: 2.5rem 0;
+
+  @include respond-to("xl") {
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  @include respond-to("md") {
+    padding: 3.75rem 1.25rem;
+  }
+
+  &__content {
+    padding: 4rem;
+    padding-left: 6rem;
+    color: $white;
+
+    @include respond-to("xl") {
+      margin-bottom: 2.5rem;
+      text-align: center;
+      padding: 0;
+    }
+
+    h2 {
+      color: $tan-200;
+      margin-bottom: 0.75rem;
+      font: {
+        size: 1.875rem;
+        weight: 900;
+      }
+      text-transform: uppercase;
+    }
+
+    strong {
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 300;
+    }
+
+    p ~ p {
+      margin-top: 1.25rem;
+    }
+  }
+  &__image {
+    @include respond-to("md") {
+      height: 25rem;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 40px;
+      object-position: top;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.method {
+  align-items: flex-end;
+  background: linear-gradient(to bottom, #dfe9f3, #e4e4e4);
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem;
+
+  @include respond-to("md") {
+    flex-direction: column;
+    padding: 3.75rem 1.25rem;
+  }
+
+  &__content {
+    background: $tan-200;
+    border-radius: 30px 0 30px 0;
+    margin: 0 -6.25rem 2.5rem 3rem;
+    max-width: 1350px;
+    padding: 2.5rem 8.25rem 4.375rem 6.25rem;
+
+    @include respond-to("md") {
+      border-radius: 30px;
+      flex-direction: column;
+      margin: 0;
+      padding: 2.5rem 1.25rem;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    margin: 0 -1.25rem -1.25rem -6.25rem;
+    object-fit: cover;
+
+    @include respond-to("md") {
+      height: 300px;
+      margin: 1.25rem 0 -3.75rem 0;
+      object: {
+        position: bottom;
+        fit: contain;
+      }
+      width: 100%;
+    }
+  }
+
+  &__text {
+    color: $gray-700;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9375rem;
+    gap: 1.25rem 2.5rem;
+
+    p {
+      flex-basis: calc(50% - 1.25rem);
+
+      @include respond-to("md") {
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__title {
+    align-items: center;
+    color: $green-400;
+    display: flex;
+    flex-wrap: wrap;
+    font: {
+      size: 1.75rem;
+      weight: 900;
+    }
+    gap: 0.625rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+
+    @include respond-to("md") {
+      font-size: 1.25rem;
+
+      img {
+        height: 3.125rem;
+        width: 3.125rem;
+      }
+    }
+  }
+}
