@@ -1,44 +1,73 @@
 .hero {
   align-items: center;
-  background: url("#{$image-path}/hero-bg.webp") no-repeat center / cover;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    #8b492d url("#{$image-path}/hero-bg.webp") no-repeat center / cover;
   color: $white;
   display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  line-height: 1.35;
   min-height: 100vh;
-  padding: 20px;
+  padding: 1.25rem;
 
-  @include respond-to("lg") {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("#{$image-path}/hero-bg.webp") no-repeat center / cover;
+  @include respond-to("md") {
+    gap: 0;
   }
-
+  
   &__container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: 0 auto;
-    max-width: 1200px;
+    width: 85%;
 
-    @include respond-to("lg") {
-      align-items: center;
+    @include respond-to("md") {
       flex-direction: column;
+      width: 100%;
     }
   }
 
   header {
     width: 50%;
-    @include respond-to("lg") {
+    @include respond-to("md") {
       width: 100%;
       text-align: center;
+    }
+
+    h1 {
+      font : {
+        size: 1.5625rem;
+        weight: 500;
+      }
+      margin-bottom: 0.3125rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    img {
+      height: auto;
+      margin-bottom: 1.875rem;
+      width: 14.5rem;
     }
   }
 
   &__video {
-    .video {
-      width: 500px;
-      height: 300px;
-      border-radius: 40px;
-      background: rgb(165, 165, 165);
+    flex: 1;
+    max-width: 600px;
+    margin-top: 40px;
+    width: 100%;
+
+    #smartplayer {
+      border-radius: 1.25rem !important;
     }
   }
 }

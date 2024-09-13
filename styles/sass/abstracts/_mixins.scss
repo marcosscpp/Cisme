@@ -1,9 +1,12 @@
 @mixin font-face($name, $file, $weight: normal, $style: normal) {
   @font-face {
-    font-family: $name;
+    font: {
+      display: swap;
+      family: $name;
+      style: $style;
+      weight: $weight;
+    }
     src: url("#{$font-path}/#{$file}.otf") format("opentype");
-    font-weight: $weight;
-    font-style: $style;
   }
 }
 
