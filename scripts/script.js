@@ -3,3 +3,4 @@ import Faq from "./modules/faq.js";
 
 initSwiper();
 const faq = new Faq("[data-faq] dt");
+AOS.init();
